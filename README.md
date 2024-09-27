@@ -31,7 +31,8 @@ Surely there exist much better ways of configuring the programs, this is the bes
     build/exec
     ```
     ```
-    build/test
+    cd build
+    make test
     ```
     to test the program or the tests, respectively.
 
