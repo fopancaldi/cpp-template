@@ -1,11 +1,9 @@
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.25)
 project(cpp-template VERSION 0.1.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS ON)
-
-add_compile_options("-Ofast")
 
 string(APPEND CMAKE_CXX_FLAGS
       " -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wcast-qual -Wformat=2"
@@ -16,12 +14,15 @@ string(APPEND CMAKE_CXX_FLAGS
 string(APPEND CMAKE_CXX_FLAGS_DEBUG " -fsanitize=address,undefined -fno-omit-frame-pointer")
 string(APPEND CMAKE_EXE_LINKER_FLAGS_DEBUG " -fsanitize=address,undefined -fno-omit-frame-pointer")
 
-list(APPEND CMAKE_CTEST_ARGUMENTS "--output-on-failure")
+set(CMAKE_CTEST_ARGUMENTS "--output-on-failure")
 
 add_executable(exec src/main.cpp src/team.cpp)
 
 if (BUILD_TESTING)
-      add_executable(test tests/test.cpp src/team.cpp)
-      target_include_directories(test PRIVATE src include)
-      add_test(NAME test COMMAND test)
+      include(CTest)
+      enable_testing()
+
+      add_executable(test1 tests/test1.cpp src/team.cpp)
+      target_include_directories(test1 PRIVATE src include)
+      add_test(NAME test1 COMMAND test1)
 endif()

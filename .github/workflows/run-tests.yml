@@ -28,4 +28,6 @@ jobs:
           cmake -S . -B build -DBUILD_TESTING=ON
           cmake --build build
       - name: Run tests
-        run: build/test
+        run: |
+          cd build
+          make test
