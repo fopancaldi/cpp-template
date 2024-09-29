@@ -6,8 +6,8 @@
             "dependsOrder": "sequence"
         },
         {
-            "label": "Build test",
-            "dependsOn": ["Create 'debug'", "Build test inside 'debug'"],
+            "label": "Build this test",
+            "dependsOn": ["Create 'debug'", "Build this test inside 'debug'"],
             "dependsOrder": "sequence"
         },
         {
@@ -35,7 +35,7 @@
             ]
         },
         {
-            "label": "Build test inside 'debug'",
+            "label": "Build this test inside 'debug'",
             "type": "cppbuild",
             "command": "g++",
             "args": [

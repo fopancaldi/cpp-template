@@ -21,7 +21,7 @@
             "request": "launch",
             "program": "${workspaceFolder}/debug/a.out",
             "cwd": "${workspaceFolder}/debug",
-            "preLaunchTask": "Build test",
+            "preLaunchTask": "Build this test",
             "miDebuggerPath": "/usr/bin/gdb",
             // Added to suppress an automatic output
             // I do not understand what it does, might have unwanted effects
