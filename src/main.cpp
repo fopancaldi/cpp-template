@@ -1,6 +1,4 @@
-#include "person.hpp"
-#include "player.hpp"
-#include "team.hpp"
+#include "nba.hpp"
 
 #include <iostream>
 

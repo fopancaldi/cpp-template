@@ -1,9 +1,7 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
 
-#include "person.hpp"
-#include "player.hpp"
-#include "team.hpp"
+#include "nba.hpp"
 
 TEST_CASE("Testing Payroll") {
     nba::Player kj("Keldon Johnson", 19, nba::Position::SF);
