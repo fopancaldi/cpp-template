@@ -16,7 +16,8 @@ string(APPEND CMAKE_EXE_LINKER_FLAGS_DEBUG " -fsanitize=address,undefined -fno-o
 
 set(CMAKE_CTEST_ARGUMENTS "--output-on-failure")
 
-add_executable(exec src/main.cpp src/team.cpp)
+add_executable(exec main.cpp src/team.cpp)
+target_include_directories(exec PRIVATE src)
 
 if (BUILD_TESTING)
       include(CTest)

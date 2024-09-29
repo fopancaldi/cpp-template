@@ -30,27 +30,29 @@ Surely there exist much better ways of configuring the programs, this is the bes
     ```
     build/exec
     ```
+    and
     ```
     cd build
     make test
     ```
     to test the program or the tests, respectively.
-
 3. To generate the documentation, use
     ```
     doxygen
     ```
     then open `html/index.html` in a browser.
+4. To test the debugger, either
+- launch "Build main and debug" from the designated section of VS Code, or
+- open a test, then launch "Build this test and debug".
 
 # Remarks
 
 I chose Debian as a container instead of lighter distros due to familiarity.
 
-I committed the `.clang-format` for easiness of retrieval.
+I committed the `.clang-format` due to easiness of retrieval.
 
 # Possible additions
 
-- Makefiles.
 - More continuous integration.
 - Move `.clang-format` into a repository for dotfiles.
 - Add functionalities (e.g. arrow keys actions) to the terminal inside the container.

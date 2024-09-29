@@ -2,14 +2,31 @@
     "version": "0.2.0",
     "configurations": [
         {
-            // Needs exactly one main function to be defined among all .cpp files in src
-            "name": "Build all and debug",
+            "name": "Build and debug main",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/debug/a.out",
             "cwd": "${workspaceFolder}/debug",
-            "preLaunchTask": "Build all",
-            "miDebuggerPath": "/usr/bin/gdb"
+            "preLaunchTask": "Build main",
+            "miDebuggerPath": "/usr/bin/gdb",
+            // Added to suppress an automatic output
+            // I do not understand what it does, might have unwanted effects
+            // See https://github.com/microsoft/vscode-cpptools/issues/3298
+            "miDebuggerArgs": "-q -ex quit; wait() { fg >/dev/null; }; /bin/gdb -q --interpreter=mi"
+        },
+        {
+            // Requires the test to be the currently visualized tab
+            "name": "Build and debug this test",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/debug/a.out",
+            "cwd": "${workspaceFolder}/debug",
+            "preLaunchTask": "Build test",
+            "miDebuggerPath": "/usr/bin/gdb",
+            // Added to suppress an automatic output
+            // I do not understand what it does, might have unwanted effects
+            // See https://github.com/microsoft/vscode-cpptools/issues/3298
+            "miDebuggerArgs": "-q -ex quit; wait() { fg >/dev/null; }; /bin/gdb -q --interpreter=mi"
         }
     ]
 }
