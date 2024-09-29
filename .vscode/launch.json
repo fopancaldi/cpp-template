@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            // Needs exactly one main function to be defined among all .cpp files in src
+            "name": "Build all and debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/debug/a.out",
+            "cwd": "${workspaceFolder}/debug",
+            "preLaunchTask": "Build all",
+            "miDebuggerPath": "/usr/bin/gdb"
+        }
+    ]
+}
