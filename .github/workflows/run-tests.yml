@@ -21,8 +21,8 @@ jobs:
           apt-get upgrade -y
       - name: Install dependencies
         run: |
-          chmod u+x .devcontainer/library-scripts/provide-dependencies.sh
-          .devcontainer/library-scripts/provide-dependencies.sh
+          chmod u+x .devcontainer/library-scripts/provide-dependencies-ci.sh
+          .devcontainer/library-scripts/provide-dependencies-ci.sh
       - name: Build
         run: |
           cmake -S . -B build -DBUILD_TESTING=ON

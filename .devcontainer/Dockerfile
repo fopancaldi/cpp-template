@@ -10,7 +10,8 @@ RUN \
     apt-get update && \
     apt-get -y upgrade && \
     chmod +x /library-scripts/*.sh && \
-    library-scripts/provide-dependencies.sh && \
+    library-scripts/provide-dependencies-ci.sh && \
+    library-scripts/provide-dependencies-local.sh && \
     library-scripts/provide-user.sh ${USERNAME} ${USER_UID} ${USER_GID} && \
     rm -rf /library-scripts
 
