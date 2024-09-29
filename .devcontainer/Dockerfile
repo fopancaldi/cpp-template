@@ -15,4 +15,8 @@ RUN \
     library-scripts/provide-user.sh ${USERNAME} ${USER_UID} ${USER_GID} && \
     rm -rf /library-scripts
 
+SHELL ["/bin/bash", "-c"]
+
 USER $USERNAME
+
+WORKDIR /home/vscode
