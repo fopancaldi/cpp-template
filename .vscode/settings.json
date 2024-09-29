@@ -1,0 +1,22 @@
+{
+    "C_Cpp.default.compilerPath": "/usr/bin/g++",
+    "keybindings": [
+        {
+            "key": "up",
+            "command": "workbench.action.terminal.scrollUp",
+            "when": "terminalFocus"
+        },
+        {
+            "key": "down",
+            "command": "workbench.action.terminal.scrollDown",
+            "when": "terminalFocus"
+        }
+    ],
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "terminal.integrated.profiles.linux": {
+        "bash": {
+            "path": "/bin/bash",
+            "args": []
+        }
+    }
+}
