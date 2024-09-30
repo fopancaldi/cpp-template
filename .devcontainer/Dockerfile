@@ -16,7 +16,3 @@ RUN \
     rm -rf /library-scripts
 
 SHELL ["/bin/bash", "-c"]
-
-USER $USERNAME
-
-WORKDIR /home/vscode
