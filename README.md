@@ -63,3 +63,4 @@ See the related [issue](https://github.com/microsoft/vscode-cpptools/issues/6450
 - More continuous integration.
 - Move `.clang-format` into a repository for dotfiles.
 - Add functionalities (e.g. arrow keys actions) to the terminal inside the container.
+- Fix missing link in readme.
