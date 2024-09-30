@@ -51,6 +51,13 @@ I chose Debian as a container instead of lighter distros due to familiarity.
 
 I committed the `.clang-format` due to easiness of retrieval.
 
+There is an error message while building the container:
+
+> Error: there is no registered task type 'cppbuild'. Did you miss installing an extension that provides a corresponding task provider?
+ 
+It is completely harmless.
+See the related [issue](https://github.com/microsoft/vscode-cpptools/issues/6450).
+
 # Possible additions
 
 - More continuous integration.
