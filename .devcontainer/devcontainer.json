@@ -4,6 +4,16 @@
 		"dockerfile": "Dockerfile"
 	},
 	"customizations": {
+		"settings": {
+			"C_Cpp.default.compilerPath": "/usr/bin/g++",
+			"terminal.integrated.defaultProfile.linux": "bash",
+			"terminal.integrated.profiles.linux": {
+				"bash": {
+					"path": "/bin/bash",
+					"args": []
+				}
+			}
+		},
 		"vscode": {
 			"extensions": [
 				"eamodio.gitlens",

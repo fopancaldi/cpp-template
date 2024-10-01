@@ -15,4 +15,4 @@ RUN \
     library-scripts/provide-user.sh ${USERNAME} ${USER_UID} ${USER_GID} && \
     rm -rf /library-scripts
 
-USER $USERNAME
+SHELL ["/bin/bash", "-c"]
