@@ -14,5 +14,3 @@ RUN \
     library-scripts/provide-dependencies-local.sh && \
     library-scripts/provide-user.sh ${USERNAME} ${USER_UID} ${USER_GID} && \
     rm -rf /library-scripts
-
-SHELL ["/bin/bash", "-c"]
